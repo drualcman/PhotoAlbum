@@ -1,0 +1,20 @@
+@page "/"
+
+
+<div class="container">
+    <div class="mb-3 mt-5 text-center">
+        <h1>.NET Conf 2023 - Puebla</h1>
+        <h3>Fotos de la reunion</h3>
+    </div>
+    <CollectionView TModel="PhotoDto" Loader="ViewModel.GetPhotosAsync">
+        <Loading>
+            Cargando fotos ...
+        </Loading>
+        <Empty>
+            Aun no hay fotos registradas.
+        </Empty>
+        <Item Context="CurrentPhoto">
+            <Photo Model="CurrentPhoto" />
+        </Item>
+    </CollectionView>
+</div>

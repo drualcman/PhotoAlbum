@@ -1,0 +1,6 @@
+@PhotoAlbum.WebApi_HostAddress = http://localhost:5297
+
+GET {{PhotoAlbum.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

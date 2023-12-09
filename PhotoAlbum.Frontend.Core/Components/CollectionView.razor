@@ -1,0 +1,17 @@
+@typeparam TModel
+
+@if(Collection is null)
+{
+    @Loading
+}
+else if(!Collection.Any())
+{
+    @Empty
+}
+else
+{
+    foreach(TModel item in Collection)
+    {
+        @Item(item)
+    }
+}
